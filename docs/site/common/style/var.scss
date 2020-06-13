@@ -15,9 +15,8 @@
 // $code-font-family: "Source Code Pro", "Monaco", "Inconsolata", monospace;
 // $padding: 30px;
 // $row-max-width: 1680px;
-// $nav-width: 220px;
+
 // $border-radius: 12px;
-// $border-shadow: 0 8px 12px #ebedf0;
 
 // header
 $header-height: 60px;
@@ -25,6 +24,10 @@ $header-bg-color: #001938;
 // $header-bottom-height: 50px;
 // $header-seach-color: #515a6e;
 
+// nav
+$nav-width: 220px;
+$nav-border-shadow: 0 8px 12px #ebedf0;
+$active-color: #4fc08d;
 // simulator
 // $simulator-width: 360px;
 // $simulator-small-width: 320px;
