@@ -2,26 +2,26 @@ module.exports = {
   name: "sixty",
   site: {
     title: "Sixty",
-    // logo: require('./docs/site/common/imgs/logo.svg'),
-
+    logo: require("./common/imgs/logo.svg"),
+    description: "移动端 Vue 组件库",
     nav: [
-      // {
-      //   title: "开发指南",
-      // items: [
-      //   {
-      //     path: "home",
-      //     title: "介绍",
-      //   },
-      //   {
-      //     path: "quickstart",
-      //     title: "快速上手",
-      //   },
-      //   {
-      //     path: "changelog",
-      //     title: "更新日志",
-      //   },
-      // ],
-      // },
+      {
+        title: "开发指南",
+        items: [
+          {
+            path: "home",
+            title: "介绍",
+          },
+          //   {
+          //     path: "quickstart",
+          //     title: "快速上手",
+          //   },
+          //   {
+          //     path: "changelog",
+          //     title: "更新日志",
+          //   },
+        ],
+      },
       {
         title: "基础组件",
         items: [
@@ -29,10 +29,10 @@ module.exports = {
             path: "button",
             title: "Button 按钮",
           },
-          // {
-          //   path: "icon",
-          //   title: "Icon 图标",
-          // },
+          {
+            path: "icon",
+            title: "Icon 图标",
+          },
           // {
           //   path: "cell",
           //   title: "Cell 单元格",

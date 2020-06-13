@@ -6,6 +6,18 @@
 <script>
 import SixDoc from "./components/index.vue";
 export default {
-  components: { SixDoc },
+  components: { SixDoc }
 };
 </script>
+<style lang="scss">
+@import "../common/style/base.scss";
+.six-doc-intro {
+  padding-top: 20px;
+  font-family: "Dosis", "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+  text-align: center;
+
+  p {
+    margin-bottom: 20px;
+  }
+}
+</style>

@@ -6,11 +6,7 @@
     </h1>
 
     <ul class="doc-header__nav">
-      <li
-        class="doc-header__nav-item"
-        v-for="(item, index) in config.links"
-        :key="index"
-      >
+      <li class="doc-header__nav-item" v-for="(item, index) in config.links" :key="index">
         <a target="_blank" :href="item.url">
           <img :src="item.logo" />
         </a>
@@ -29,12 +25,12 @@ export default {
         links: [
           {
             logo: require("../../common/imgs/github.svg"),
-            url: "https://github.com/Miss-Sixty/sixty",
-          },
-        ],
-      },
+            url: "https://github.com/Miss-Sixty/sixty"
+          }
+        ]
+      }
     };
-  },
+  }
 };
 </script>
 <style lang="scss" scoped>
@@ -47,7 +43,9 @@ export default {
   color: #fff;
   display: flex;
   padding: 0 30px;
+
   &__logo {
+    pointer-events: none;
     > * {
       display: inline-block;
       vertical-align: middle;

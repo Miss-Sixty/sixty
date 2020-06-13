@@ -1,26 +1,22 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import { isMobile, importAll, nav } from "../common/index.js";
+import DemoHome from "./components/DemoHome.vue";
+import { nav, importAll } from "../common/index.js";
 import "../common/iframe-router";
 
-if (isMobile) {
-  location.replace("mobile.html" + location.hash);
-}
-
-const docs = {};
-const docsFromMarkdown = require.context("../../markdown", false, /\.md$/);
-const docsFromPackages = require.context("../../../src", true, /\.md$/);
-
-importAll(docs, docsFromMarkdown);
-importAll(docs, docsFromPackages);
-
-Vue.use(VueRouter);
+const componentMap = {};
+const context = require.context("../../../src", true, /demo\/index.vue$/);
+importAll(componentMap, context);
 
 function getRoutes() {
   const routes = [
     {
       path: "*",
-      redirect: () => "/home",
+      redirect: () => `/home`,
+    },
+    {
+      path: `/home`,
+      component: DemoHome,
     },
   ];
 
@@ -31,18 +27,16 @@ function getRoutes() {
 
   function addRoute(page) {
     let { path } = page;
-
-    if (!path) return;
-
-    const module = docs[`./${path}/README.md`] || docs[`./${path}.md`];
+    const module = componentMap[`./${path}/demo/index.vue`];
     let component;
 
     if (module) {
       component = module.default;
     }
 
-    if (!component) return;
-
+    if (!component) {
+      return;
+    }
     routes.push({
       component,
       name: path,
@@ -57,15 +51,10 @@ function getRoutes() {
   return routes;
 }
 
+Vue.use(VueRouter);
+
 const router = new VueRouter({
   routes: getRoutes(),
-  scrollBehavior(to) {
-    if (to.hash) {
-      return { selector: to.hash };
-    }
-
-    return { x: 0, y: 0 };
-  },
 });
 
 router.afterEach(() => {
@@ -73,4 +62,5 @@ router.afterEach(() => {
 });
 
 window.vueRouter = router;
+
 export default router;

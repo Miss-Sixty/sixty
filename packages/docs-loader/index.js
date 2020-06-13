@@ -1,11 +1,11 @@
-const loaderUtils = require('loader-utils');
-const MarkdownIt = require('markdown-it');
-const markdownItAnchor = require('markdown-it-anchor');
-const frontMatter = require('front-matter');
-const highlight = require('./highlight');
-const linkOpen = require('./link-open');
-const cardWrapper = require('./card-wrapper');
-const { slugify } = require('transliteration');
+const loaderUtils = require("loader-utils");
+const MarkdownIt = require("markdown-it");
+const markdownItAnchor = require("markdown-it-anchor");
+const frontMatter = require("front-matter");
+const highlight = require("./highlight");
+const linkOpen = require("./link-open");
+const cardWrapper = require("./card-wrapper");
+const { slugify } = require("transliteration");
 
 function wrapper(content) {
   content = cardWrapper(content);
@@ -15,21 +15,17 @@ function wrapper(content) {
 <template>
   <section v-html="content" v-once />
 </template>
-
 <script>
 export default {
   created() {
     this.content = unescape(\`${content}\`);
   },
-
   mounted() {
     const anchors = [].slice.call(this.$el.querySelectorAll('h2, h3, h4, h5'));
-
     anchors.forEach(anchor => {
       anchor.addEventListener('click', this.scrollToAnchor);
     });
   },
-
   methods: {
     scrollToAnchor(event) {
       if (event.target.id) {
@@ -47,10 +43,10 @@ export default {
 
 const parser = new MarkdownIt({
   html: true,
-  highlight
+  highlight,
 }).use(markdownItAnchor, {
   level: 2,
-  slugify
+  slugify,
 });
 
 module.exports = function(source) {
@@ -60,7 +56,7 @@ module.exports = function(source) {
   options = {
     wrapper,
     linkOpen: true,
-    ...options
+    ...options,
   };
 
   let fm;
