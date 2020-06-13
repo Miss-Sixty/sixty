@@ -39,15 +39,9 @@ export default {
   },
 
   created() {
-    window.addEventListener("scroll", this.onScroll);
-    this.onScroll();
-  },
-
-  methods: {
-    onScroll() {
-      const { pageYOffset: offset } = window;
-      this.top = Math.max(0, 60 - offset);
-    },
+    window.addEventListener("scroll", () => {
+      this.top = Math.max(0, 60 - window.pageYOffset);
+    });
   },
 };
 </script>
@@ -87,7 +81,7 @@ export default {
       font-size: 13px;
       &:hover,
       &.active {
-        color: $active-color;
+        color: $green;
       }
       &.active {
         -webkit-font-smoothing: auto;

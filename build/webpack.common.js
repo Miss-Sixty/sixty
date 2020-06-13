@@ -20,16 +20,7 @@ module.exports = {
       },
       {
         test: /\.vue$/,
-        use: [
-          {
-            loader: "vue-loader",
-            options: {
-              compilerOptions: {
-                preserveWhitespace: false,
-              },
-            },
-          },
-        ],
+        use: ["vue-loader"],
       },
       {
         test: /\.(svg)(\?.*)?$/,
@@ -43,6 +34,10 @@ module.exports = {
           },
         ],
       },
+      {
+        test: /\.md$/,
+        use: ["vue-loader", path.resolve("packages/docs-loader")],
+      },
       //   {
       //     test: /\.(js|ts|tsx)$/,
       //     exclude: /node_modules/,
@@ -55,24 +50,6 @@ module.exports = {
       //     },
       //   },
       //   {
-      //     test: /\.less$/,
-      //     sideEffects: true,
-      //     use: [
-      //       "style-loader",
-      //       "css-loader",
-      //       "postcss-loader",
-      //       {
-      //         loader: "less-loader",
-      //         options: {
-      //           paths: [path.resolve(__dirname, "node_modules")],
-      //         },
-      //       },
-      //     ],
-      //   },
-      //   {
-      //     test: /\.md$/,
-      //     use: ["vue-loader", "@vant/markdown-loader"],
-      //   },
     ],
   },
   plugins: [new VueLoaderPlugin()],

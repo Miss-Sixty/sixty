@@ -1,3 +1,5 @@
+@import "./highlight";
+
 body {
   min-width: 1000px;
   margin: 0;
@@ -6,6 +8,7 @@ body {
     Segoe UI, Arial, Roboto, "PingFang SC", "Hiragino Sans GB",
     "Microsoft Yahei", sans-serif;
   -webkit-font-smoothing: antialiased;
+  background-color: #f7f8fa;
 }
 
 a {
