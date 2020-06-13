@@ -1,0 +1,22 @@
+{
+  "name": "new-sixty",
+  "version": "1.0.0",
+  "description": "基于vue的手机端UI组件库",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npm run build:entry ",
+    "build:entry": "node build/build-entry.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "vue": "^2.6.11"
+  },
+  "devDependencies": {
+    "fs-extra": "^9.0.1",
+    "uppercamelcase": "^3.0.0",
+    "webpack": "^4.43.0",
+    "webpack-dev-server": "^3.11.0"
+  }
+}
