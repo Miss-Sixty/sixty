@@ -44,36 +44,26 @@ $animation-duration-base: 0.3s;
 $animation-duration-fast: 0.2s;
 
 // Border
-$border-color: $gray-3;
+$border-color: $gray-5;
 $border-width-base: 1px;
 $border-radius-sm: 2px;
 
 // Button
 $button-normal-font-size: $font-size-md;
-$button-default-height: 44px;
-$button-default-font-size: $font-size-lg;
-$button-default-line-height: 1.2;
-$button-default-color: $text-color;
-$button-default-background-color: $white;
-$button-default-border-color: $border-color;
+$button-font-size: $font-size-lg;
+$button-height: 44px;
+$button-line-height: 1.2;
+$button-color: $text-color;
+$button-background-color: $white;
+$button-border-color: $border-color;
+$button-border-width: $border-width-base;
 
 $button-primary-color: $white;
-$button-primary-background-color: $green;
-$button-primary-border-color: $green;
+$button-primary-background-color: $blue;
+$button-primary-border-color: $blue;
 
-$button-info-color: $white;
-$button-info-background-color: $blue;
-$button-info-border-color: $blue;
 
-$button-danger-color: $white;
-$button-danger-background-color: $red;
-$button-danger-border-color: $red;
 
-$button-warning-color: $white;
-$button-warning-background-color: $orange;
-$button-warning-border-color: $orange;
-
-$button-border-width: $border-width-base;
 $button-plain-background-color: $white;
 $button-disabled-opacity: $disabled-opacity;
 

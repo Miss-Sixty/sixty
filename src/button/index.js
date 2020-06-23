@@ -1,12 +1,13 @@
 import { addUnit } from "../utils";
 import "./index.scss";
+import { WHITE } from '../utils/constant';
 
 export default {
   name: "SixButton",
   props: {
     type: {
       type: String,
-      default: "default",
+      default: "plain",
     },
     size: {
       type: String,
@@ -50,10 +51,14 @@ export default {
       type: Boolean,
       default: false,
     },
+    dashed: {
+      type: Boolean,
+      default: false
+    }
   },
   computed: {
     classes() {
-      const { type, size, plain, disabled, ghost, block } = this;
+      const { type, size, plain, disabled, ghost, block, dashed } = this;
       return [
         "six-button",
         `six-button--${type}`,
@@ -62,15 +67,31 @@ export default {
         { "six-button--disabled": disabled },
         { "six-button--ghost": ghost },
         { "six-button--block": block },
+        { "six-button--dashed": dashed },
       ];
     },
     style() {
-      const { radius, color } = this;
-      return {
-        "border-radius": addUnit(radius),
-        color: color,
-        "border-color": color,
-      };
+      const { radius, color, plain, ghost } = this;
+      let style = { "border-radius": addUnit(radius), }
+
+      if (!color) return style;
+
+      if (ghost || plain) {
+        style.color = color;
+        style.borderColor = color
+      } else {
+        style.color = WHITE
+        style.background = color;
+
+        //如果为渐变色则隐藏边框
+        if (color.indexOf('gradient') !== -1) {
+          style.border = 0;
+        } else {
+          style.borderColor = color;
+        }
+      }
+
+      return style
     },
   },
   methods: {

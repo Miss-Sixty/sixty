@@ -1,26 +1,15 @@
 <template>
   <demo-section>
     <demo-block title="按钮类型">
-      <div class="demo-button-row">
-        <six-button type="default" text="默认按钮" />
-        <six-button>默认按钮</six-button>
-        <six-button type="primary" text="主要按钮" />
-      </div>
-      <six-button type="info" text="信息按钮" />
-      <six-button type="warning" text="警告按钮" />
-      <six-button type="danger" text="危险按钮" />
+      <six-button type="primary" text="主要按钮" />
+      <six-button type="plain" text="朴素按钮" />
+      <six-button type="dashed" text="虚线按钮" />
     </demo-block>
-
-    <demo-block title="朴素按钮">
-      <six-button plain type="primary">朴素按钮</six-button>
-      <six-button plain type="info">朴素按钮</six-button>
-    </demo-block>
-
-    <h3></h3>
 
     <demo-block title="禁用按钮">
       <six-button disabled type="primary">禁用状态</six-button>
-      <six-button disabled type="info">禁用状态</six-button>
+      <six-button disabled>禁用状态</six-button>
+      <six-button disabled type="dashed">禁用状态</six-button>
     </demo-block>
 
     <demo-block title="按钮圆角">
@@ -31,21 +20,15 @@
 
     <demo-block title="幽灵按钮">
       <div class="ghost">
-        <div class="demo-button-row">
-          <six-button type="primary" ghost>方形按钮</six-button>
-          <six-button ghost>圆形按钮</six-button>
-          <six-button ghost color="#fff">圆形按钮</six-button>
-        </div>
-        <six-button ghost color="#7232dd">圆形按钮</six-button>
+        <six-button ghost type="primary" text="幽灵按钮" />
+        <six-button ghost color="#7232dd" text="幽灵按钮" />
+        <six-button ghost type="dashed" color="#7232dd" text="幽灵按钮" />
       </div>
     </demo-block>
 
     <demo-block title="按钮尺寸">
-      <div class="demo-button-row">
-        <six-button type="primary" size="normal">普通按钮</six-button>
-        <six-button type="primary">普通按钮</six-button>
-        <six-button type="primary" size="small">小型按钮</six-button>
-      </div>
+      <six-button type="primary" size="normal">普通按钮</six-button>
+      <six-button type="primary" size="small">小型按钮</six-button>
       <six-button type="primary" size="mini">迷你按钮</six-button>
     </demo-block>
 
@@ -61,7 +44,7 @@
     <demo-block title="自定义颜色">
       <six-button color="#7232dd">单色按钮</six-button>
       <six-button color="#7232dd" plain>单色按钮</six-button>
-      <!-- <six-button color="linear-gradient(to right, #4bb0ff, #6149f6)">渐变色按钮<six-button> -->
+      <six-button color="linear-gradient(to right, #4bb0ff, #6149f6)">渐变色按钮</six-button>
     </demo-block>
   </demo-section>
 </template>
@@ -75,6 +58,31 @@ export default {
 @import "../../style/var";
 
 .demo-button {
+  background: $white;
+
+  .six-button {
+    &--large {
+      margin-bottom: $padding-md;
+    }
+
+    &--small,
+    &--normal:not(:last-child) {
+      margin-right: $padding-md;
+    }
+  }
+  .ghost {
+    background-color: $gray-3;
+    padding: 10px;
+  }
+
+  .six-doc-demo-block {
+    padding: 0 $padding-md;
+  }
+
+  .six-doc-demo-block__title {
+    padding-left: 0;
+  }
+
   &-row {
     margin-bottom: $padding-sm;
   }
