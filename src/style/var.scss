@@ -1,0 +1,83 @@
+// Color Palette
+$black: #000;
+$white: #fff;
+$gray-1: #f7f8fa;
+$gray-2: #f2f3f5;
+$gray-3: #ebedf0;
+$gray-4: #dcdee0;
+$gray-5: #c8c9cc;
+$gray-6: #969799;
+$gray-7: #646566;
+$gray-8: #323233;
+$red: #ee0a24;
+$blue: #1989fa;
+$orange: #ff976a;
+$orange-dark: #ed6a0c;
+$orange-light: #fffbe8;
+$green: #07c160;
+
+// Component Colors
+$text-color: $gray-8;
+$background-color: $gray-1;
+$disabled-opacity: 0.5;
+
+// Padding
+$padding-base: 4px;
+$padding-xs: $padding-base * 2;
+$padding-sm: $padding-base * 3;
+$padding-md: $padding-base * 4;
+$padding-lg: $padding-base * 6;
+$padding-xl: $padding-base * 8;
+
+// Font
+$font-size-xs: 10px;
+$font-size-sm: 12px;
+$font-size-md: 14px;
+$font-size-lg: 16px;
+$font-weight-bold: 500;
+$base-font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue",
+  Helvetica, Segoe UI, Arial, Roboto, "PingFang SC", "Hiragino Sans GB",
+  "Microsoft Yahei", sans-serif;
+
+// Animation
+$animation-duration-base: 0.3s;
+$animation-duration-fast: 0.2s;
+
+// Border
+$border-color: $gray-3;
+$border-width-base: 1px;
+$border-radius-sm: 2px;
+
+// Button
+$button-normal-font-size: $font-size-md;
+$button-default-height: 44px;
+$button-default-font-size: $font-size-lg;
+$button-default-line-height: 1.2;
+$button-default-color: $text-color;
+$button-default-background-color: $white;
+$button-default-border-color: $border-color;
+
+$button-primary-color: $white;
+$button-primary-background-color: $green;
+$button-primary-border-color: $green;
+
+$button-info-color: $white;
+$button-info-background-color: $blue;
+$button-info-border-color: $blue;
+
+$button-danger-color: $white;
+$button-danger-background-color: $red;
+$button-danger-border-color: $red;
+
+$button-warning-color: $white;
+$button-warning-background-color: $orange;
+$button-warning-border-color: $orange;
+
+$button-border-width: $border-width-base;
+$button-plain-background-color: $white;
+$button-disabled-opacity: $disabled-opacity;
+
+$button-small-height: 32px;
+$button-small-font-size: $font-size-sm;
+$button-mini-height: 24px;
+$button-mini-font-size: $font-size-xs;
