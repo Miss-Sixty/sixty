@@ -19,6 +19,11 @@ module.exports = {
         use: [...CSS_LOADERS, "sass-loader"],
       },
       {
+        test: /\.js$/,
+        exclude: /node_modules|docs/,
+        use: "babel-loader",
+      },
+      {
         test: /\.vue$/,
         use: ["vue-loader"],
       },
@@ -38,18 +43,6 @@ module.exports = {
         test: /\.md$/,
         use: ["vue-loader", path.resolve("packages/docs-loader")],
       },
-      //   {
-      //     test: /\.(js|ts|tsx)$/,
-      //     exclude: /node_modules/,
-      //     use: {
-      //       loader: "babel-loader",
-      //       // enable sub-packages to find babel config
-      //       options: {
-      //         rootMode: "upward",
-      //       },
-      //     },
-      //   },
-      //   {
     ],
   },
   plugins: [new VueLoaderPlugin()],
