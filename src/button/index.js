@@ -116,7 +116,7 @@ export default {
     } = this;
     return (
       <tag class={classes} style={style} disabled={disabled} onclick={onClick}>
-        {text || slots.default}
+        <div class='six-button__content'>  {text || slots.default}</div>
       </tag>
     );
   },
