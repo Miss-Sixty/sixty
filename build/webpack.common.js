@@ -25,7 +25,14 @@ module.exports = {
       },
       {
         test: /\.vue$/,
-        use: ["vue-loader"],
+        use: {
+          loader: 'vue-loader',
+          options: {
+            compilerOptions: {
+              preserveWhitespace: false,//inline-block去掉空格
+            },
+          },
+        },
       },
       {
         test: /\.(svg)(\?.*)?$/,
