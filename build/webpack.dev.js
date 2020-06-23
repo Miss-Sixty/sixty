@@ -17,7 +17,7 @@ module.exports = merge(config, {
   //   },
   output: {
     path: path.join(__dirname, "../docs/dist"),
-    publicPath: "/",
+    publicPath: "./",
     // chunkFilename: "async_[name].js",
   },
   optimization: {
