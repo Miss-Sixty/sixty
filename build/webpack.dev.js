@@ -5,7 +5,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = merge(config, {
   entry: {
-    "sixty-docs": "./docs/site/desktop/main.js",
+    "sixty-desktop": "./docs/site/desktop/main.js",
     "sixty-mobile": "./docs/site/mobile/main",
   },
   //   devServer: {
@@ -35,7 +35,7 @@ module.exports = merge(config, {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      chunks: ["chunks", "sixty-docs"], //TODO:待查看什么意思
+      chunks: ["chunks", "sixty-desktop"], //TODO:待查看什么意思
       template: path.join(__dirname, "../docs/site/desktop/index.html"),
       favicon: path.join(__dirname, "../docs/site/common/imgs/favicon.ico"),
       filename: "index.html",
