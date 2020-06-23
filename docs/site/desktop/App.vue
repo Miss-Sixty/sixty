@@ -10,7 +10,9 @@ export default {
 };
 </script>
 <style lang="scss">
-@import "../common/style/base.scss";
+@import "../common/style/base";
+@import "../common/style/highlight";
+
 .six-doc-intro {
   padding-top: 20px;
   font-family: "Dosis", "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;

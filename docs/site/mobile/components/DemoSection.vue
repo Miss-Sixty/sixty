@@ -25,9 +25,8 @@ export default {
 
 <style lang="scss">
 .six-doc-demo-section {
-  background-color: #fff;
-  padding: 0 16px 20px;
   box-sizing: border-box;
   min-height: calc(100vh - 56px);
+  padding-bottom: 20px;
 }
 </style>

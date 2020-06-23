@@ -14,8 +14,8 @@ export default {
         return path.split("/").slice(-1)[0];
       }
       return this.$route.name;
-    },
-  },
+    }
+  }
 };
 </script>
 
@@ -103,7 +103,7 @@ export default {
     }
     td {
       padding: 8px;
-      border-top: 1px solid $code-background-color;
+      border-top: 1px solid $background-color;
       &:first-child {
         padding-left: 0;
         // version tag
