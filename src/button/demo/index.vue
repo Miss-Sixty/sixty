@@ -13,9 +13,12 @@
     </demo-block>
 
     <demo-block title="按钮圆角">
-      <six-button :radius="0">方形按钮</six-button>
-      <six-button radius="6px">圆角按钮</six-button>
-      <six-button radius="999">圆形按钮</six-button>
+      <div class="demo-button-row">
+        <six-button :radius="0">方形按钮</six-button>
+        <six-button radius="6px">圆角按钮</six-button>
+        <six-button radius="999">药丸按钮</six-button>
+      </div>
+      <six-button radius="22px 0 22px 0">自定按钮</six-button>
     </demo-block>
 
     <demo-block title="幽灵按钮">
