@@ -137,7 +137,7 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "/";
+/******/ 	__webpack_require__.p = "./";
 /******/
 /******/ 	var jsonpArray = window["webpackJsonp"] = window["webpackJsonp"] || [];
 /******/ 	var oldJsonpFunction = jsonpArray.push.bind(jsonpArray);
@@ -715,7 +715,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _six
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n//\n//\n//\n//\n//\n//\n\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  name: \"six-doc-simulator\",\n\n  data() {\n    return {\n      scrollTop: window.scrollY,\n      windowHeight: window.innerHeight,\n      src: `/mobile.html${location.hash}`\n    };\n  },\n\n  computed: {\n    isFixed() {\n      return this.scrollTop > 60;\n    },\n\n    simulatorStyle() {\n      const height = Math.min(640, this.windowHeight - 90);\n      return {\n        height: height + \"px\"\n      };\n    }\n  },\n\n  mounted() {\n    window.addEventListener(\"scroll\", () => {\n      this.scrollTop = window.scrollY;\n    });\n    window.addEventListener(\"resize\", () => {\n      this.windowHeight = window.innerHeight;\n    });\n  }\n});\n\n\n//# sourceURL=webpack:///./docs/site/desktop/components/Simulator.vue?./node_modules/_vue-loader@15.9.3@vue-loader/lib??vue-loader-options");
+eval("__webpack_require__.r(__webpack_exports__);\n//\n//\n//\n//\n//\n//\n\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  name: \"six-doc-simulator\",\n\n  data() {\n    return {\n      scrollTop: window.scrollY,\n      windowHeight: window.innerHeight,\n      src: `./mobile.html${location.hash}`\n    };\n  },\n\n  computed: {\n    isFixed() {\n      return this.scrollTop > 60;\n    },\n\n    simulatorStyle() {\n      const height = Math.min(640, this.windowHeight - 90);\n      return {\n        height: height + \"px\"\n      };\n    }\n  },\n\n  mounted() {\n    window.addEventListener(\"scroll\", () => {\n      this.scrollTop = window.scrollY;\n    });\n    window.addEventListener(\"resize\", () => {\n      this.windowHeight = window.innerHeight;\n    });\n  }\n});\n\n\n//# sourceURL=webpack:///./docs/site/desktop/components/Simulator.vue?./node_modules/_vue-loader@15.9.3@vue-loader/lib??vue-loader-options");
 
 /***/ }),
 
