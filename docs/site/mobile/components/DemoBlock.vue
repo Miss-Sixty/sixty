@@ -10,8 +10,8 @@ export default {
   name: "demo-block",
 
   props: {
-    title: String
-  }
+    title: String,
+  },
 };
 </script>
 
@@ -22,7 +22,7 @@ export default {
   &__title {
     margin: 0;
     padding: 32px 16px 16px;
-    color: $six-doc-text-light-blue;
+    color: $text-light-blue;
     font-weight: normal;
     font-size: 14px;
     line-height: 16px;
