@@ -95,7 +95,8 @@ export default {
     },
   },
   methods: {
-    onClick() {
+    onClick(event) {
+      this.$emit('click', event);
       const { to, url, replace, $router: router, $route: route } = this;
       if (to && router && route.path !== `/${to}`) {
         router[replace ? "replace" : "push"](to);
@@ -103,6 +104,9 @@ export default {
         replace ? location.replace(url) : (location.href = url);
       }
     },
+    onTouchstart(event) {
+      this.$emit('touchstart', event);
+    }
   },
   render() {
     const {
@@ -112,10 +116,11 @@ export default {
       style,
       $slots: slots,
       disabled,
-      onClick,
+      onClick, onTouchstart
     } = this;
     return (
-      <tag class={classes} style={style} disabled={disabled} onclick={onClick}>
+      <tag class={classes} style={style} disabled={disabled} onclick={onClick}
+        ontouchstart={onTouchstart}>
         <div class='six-button__content'>  {text || slots.default}</div>
       </tag>
     );
