@@ -1,10 +1,12 @@
 const path = require("path");
 const { VueLoaderPlugin } = require("vue-loader");
+const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const WebpackBar = require('webpackbar');
 
 const CSS_LOADERS = ["style-loader", "css-loader", "postcss-loader"];
 
 module.exports = {
-  mode: "development",
   resolve: {
     extensions: [".js", ".vue", ".scss"],
   },
@@ -52,5 +54,14 @@ module.exports = {
       },
     ],
   },
-  plugins: [new VueLoaderPlugin()],
+  plugins: [new VueLoaderPlugin(),
+  new FriendlyErrorsPlugin({
+    clearConsole: false,
+    logLevel: 'WARNING',
+  }),
+  new WebpackBar({
+    name: 'Sixty',
+    color: '#07c160',
+  }),
+  new CleanWebpackPlugin()],
 };
