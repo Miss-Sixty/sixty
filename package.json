@@ -7,6 +7,7 @@
     "dev": "npm run build:entry && webpack-dev-server --config build/webpack.dev.js",
     "build:entry": "node build/build-entry.js",
     "build:docs": "webpack --config build/webpack.dev.js",
+    "build:svg": "node ./src/icon/export.js",
     "predeploy": "npm run build:docs",
     "deploy": "gh-pages -d docs/dist",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -39,7 +40,9 @@
     "postcss": "^7.0.32",
     "postcss-loader": "^3.0.0",
     "sass-loader": "^8.0.2",
+    "shelljs": "^0.8.4",
     "style-loader": "^1.2.1",
+    "svgo": "^1.3.2",
     "transliteration": "^2.1.11",
     "uppercamelcase": "^3.0.0",
     "vue-loader": "^15.9.2",

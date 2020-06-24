@@ -2,7 +2,7 @@
 import Button from './button';
 import Icon from './icon';
 
-const version = '1.0.0';
+const version = '0.0.1';
 const components = [
   Button,
   Icon
